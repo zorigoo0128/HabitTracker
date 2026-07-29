@@ -6,14 +6,68 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		670F27D430160D9700AF012C /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 670F27D330160D9700AF012C /* WidgetKit.framework */; };
+		670F27D630160D9700AF012C /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 670F27D530160D9700AF012C /* SwiftUI.framework */; };
+		670F27E530160D9800AF012C /* HabitWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 670F27D130160D9700AF012C /* HabitWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		67E3C0BF301865C700BFD001 /* TetsLogol.icon in Resources */ = {isa = PBXBuildFile; fileRef = 67E3C0BE301865C700BFD001 /* TetsLogol.icon */; };
+		67E3C0C0301865C700BFD001 /* TetsLogol.icon in Resources */ = {isa = PBXBuildFile; fileRef = 67E3C0BE301865C700BFD001 /* TetsLogol.icon */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		670F27E330160D9800AF012C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 670F27B430160C6800AF012C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 670F27D030160D9700AF012C;
+			remoteInfo = HabitWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		670F27EA30160D9800AF012C /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				670F27E530160D9800AF012C /* HabitWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		670F27BC30160C6800AF012C /* HabitTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		670F27D130160D9700AF012C /* HabitWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HabitWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		670F27D330160D9700AF012C /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		670F27D530160D9700AF012C /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		67E3C0BE301865C700BFD001 /* TetsLogol.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = TetsLogol.icon; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		670F27E630160D9800AF012C /* Exceptions for "HabitWidget" folder in "HabitWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 670F27D030160D9700AF012C /* HabitWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		670F27BE30160C6800AF012C /* HabitTracker */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = HabitTracker;
+			sourceTree = "<group>";
+		};
+		670F27D730160D9700AF012C /* HabitWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				670F27E630160D9800AF012C /* Exceptions for "HabitWidget" folder in "HabitWidgetExtension" target */,
+			);
+			path = HabitWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,6 +80,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		670F27CE30160D9700AF012C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				670F27D630160D9700AF012C /* SwiftUI.framework in Frameworks */,
+				670F27D430160D9700AF012C /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,7 +96,10 @@
 			isa = PBXGroup;
 			children = (
 				670F27BE30160C6800AF012C /* HabitTracker */,
+				670F27D730160D9700AF012C /* HabitWidget */,
+				670F27D230160D9700AF012C /* Frameworks */,
 				670F27BD30160C6800AF012C /* Products */,
+				67E3C0BE301865C700BFD001 /* TetsLogol.icon */,
 			);
 			sourceTree = "<group>";
 		};
@@ -41,8 +107,18 @@
 			isa = PBXGroup;
 			children = (
 				670F27BC30160C6800AF012C /* HabitTracker.app */,
+				670F27D130160D9700AF012C /* HabitWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		670F27D230160D9700AF012C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				670F27D330160D9700AF012C /* WidgetKit.framework */,
+				670F27D530160D9700AF012C /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +131,12 @@
 				670F27B830160C6800AF012C /* Sources */,
 				670F27B930160C6800AF012C /* Frameworks */,
 				670F27BA30160C6800AF012C /* Resources */,
+				670F27EA30160D9800AF012C /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				670F27E430160D9800AF012C /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				670F27BE30160C6800AF012C /* HabitTracker */,
@@ -69,6 +147,28 @@
 			productName = HabitTracker;
 			productReference = 670F27BC30160C6800AF012C /* HabitTracker.app */;
 			productType = "com.apple.product-type.application";
+		};
+		670F27D030160D9700AF012C /* HabitWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 670F27E730160D9800AF012C /* Build configuration list for PBXNativeTarget "HabitWidgetExtension" */;
+			buildPhases = (
+				670F27CD30160D9700AF012C /* Sources */,
+				670F27CE30160D9700AF012C /* Frameworks */,
+				670F27CF30160D9700AF012C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				670F27D730160D9700AF012C /* HabitWidget */,
+			);
+			name = HabitWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = HabitWidgetExtension;
+			productReference = 670F27D130160D9700AF012C /* HabitWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +181,9 @@
 				LastUpgradeCheck = 2660;
 				TargetAttributes = {
 					670F27BB30160C6800AF012C = {
+						CreatedOnToolsVersion = 26.6;
+					};
+					670F27D030160D9700AF012C = {
 						CreatedOnToolsVersion = 26.6;
 					};
 				};
@@ -100,6 +203,7 @@
 			projectRoot = "";
 			targets = (
 				670F27BB30160C6800AF012C /* HabitTracker */,
+				670F27D030160D9700AF012C /* HabitWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -109,6 +213,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67E3C0BF301865C700BFD001 /* TetsLogol.icon in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		670F27CF30160D9700AF012C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67E3C0C0301865C700BFD001 /* TetsLogol.icon in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +235,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		670F27CD30160D9700AF012C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		670F27E430160D9800AF012C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 670F27D030160D9700AF012C /* HabitWidgetExtension */;
+			targetProxy = 670F27E330160D9800AF012C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		670F27C530160C6900AF012C /* Debug */ = {
@@ -249,7 +377,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=macosx*]" = TetsLogol;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = HabitTracker/HabitTracker.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -259,6 +391,8 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Zorigoo Habit";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -281,7 +415,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=macosx*]" = TetsLogol;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = HabitTracker/HabitTracker.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -291,6 +429,8 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Zorigoo Habit";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -303,6 +443,76 @@
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		670F27E830160D9800AF012C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = HabitWidget/HabitWidget.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 87Z8CS5P6S;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HabitWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HabitWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorigoo.HabitTracker.HabitWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		670F27E930160D9800AF012C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = HabitWidget/HabitWidget.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 87Z8CS5P6S;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HabitWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HabitWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zorigoo.HabitTracker.HabitWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -326,6 +536,15 @@
 			buildConfigurations = (
 				670F27C830160C6900AF012C /* Debug */,
 				670F27C930160C6900AF012C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		670F27E730160D9800AF012C /* Build configuration list for PBXNativeTarget "HabitWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				670F27E830160D9800AF012C /* Debug */,
+				670F27E930160D9800AF012C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

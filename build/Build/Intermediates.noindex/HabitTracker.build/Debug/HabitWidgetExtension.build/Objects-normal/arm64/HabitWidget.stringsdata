@@ -1,0 +1,24 @@
+{
+  "source": "/Users/zorigoo/Documents/HabitTracker/HabitTracker/HabitWidget/HabitWidget.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Time:",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 49
+        }
+      },
+      {
+        "comment": "",
+        "key": "Favorite Emoji:",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 52
+        }
+      }
+    ]
+  },
+  "version": 1
+}

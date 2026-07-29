@@ -1,0 +1,515 @@
+[
+  {
+    "typeName": "HabitWidgetExtension.TimerConfiguration",
+    "mangledTypeName": "20HabitWidgetExtension18TimerConfigurationV",
+    "kind": "struct",
+    "file": "/Users/zorigoo/Documents/HabitTracker/HabitTracker/HabitWidget/HabitWidgetControl.swift",
+    "line": 51,
+    "conformances": [
+      "AppIntents.ControlConfigurationIntent",
+      "AppIntents.AppIntent",
+      "AppIntents.PersistentlyIdentifiable",
+      "AppIntents._SupportsAppDependencies",
+      "Swift.Sendable",
+      "Swift.SendableMetatype"
+    ],
+    "allConformances": [
+      {
+        "protocolName": "AppIntents.ControlConfigurationIntent",
+        "conformanceDefiningModule": "HabitWidgetExtension"
+      },
+      {
+        "protocolName": "AppIntents.AppIntent",
+        "conformanceDefiningModule": "HabitWidgetExtension"
+      },
+      {
+        "protocolName": "AppIntents.PersistentlyIdentifiable",
+        "conformanceDefiningModule": "HabitWidgetExtension"
+      },
+      {
+        "protocolName": "AppIntents._SupportsAppDependencies",
+        "conformanceDefiningModule": "HabitWidgetExtension"
+      },
+      {
+        "protocolName": "Swift.Sendable",
+        "conformanceDefiningModule": "HabitWidgetExtension"
+      },
+      {
+        "protocolName": "Swift.SendableMetatype",
+        "conformanceDefiningModule": "HabitWidgetExtension"
+      }
+    ],
+    "associatedTypeAliases": [
+      {
+        "typeAliasName": "NeverResult",
+        "substitutedTypeName": "Swift.Never",
+        "substitutedMangledTypeName": "s5NeverO"
+      },
+      {
+        "typeAliasName": "PerformResult",
+        "substitutedTypeName": "Swift.Never",
+        "substitutedMangledTypeName": "s5NeverO"
+      },
+      {
+        "typeAliasName": "SummaryContent",
+        "substitutedTypeName": "some AppIntents.ParameterSummary",
+        "substitutedMangledTypeName": "10AppIntents0A6IntentPAAE16parameterSummaryQrvpZQOy20HabitWidgetExtension18TimerConfigurationV_Qo_",
+        "opaqueTypeProtocolRequirements": [
+          "AppIntents.ParameterSummary"
+        ],
+        "opaqueTypeSameTypeRequirements": []
+      }
+    ],
+    "properties": [
+      {
+        "label": "_timerName",
+        "type": "AppIntents.IntentParameter<Swift.String>",
+        "mangledTypeName": "n/a - deprecated",
+        "isStatic": "false",
+        "isComputed": "false",
+        "file": "/Users/zorigoo/Documents/HabitTracker/HabitTracker/HabitWidget/HabitWidgetControl.swift",
+        "line": 55,
+        "valueKind": "InitCall",
+        "value": {
+          "type": "AppIntents.IntentParameter<Swift.String>",
+          "arguments": [
+            {
+              "label": "title",
+              "type": "Foundation.LocalizedStringResource",
+              "valueKind": "RawLiteral",
+              "value": "Timer Name"
+            },
+            {
+              "label": "description",
+              "type": "Swift.Optional<Foundation.LocalizedStringResource>",
+              "valueKind": "NilLiteral"
+            },
+            {
+              "label": "default",
+              "type": "Swift.Optional<Swift.String>",
+              "valueKind": "RawLiteral",
+              "value": "Timer"
+            },
+            {
+              "label": "inputOptions",
+              "type": "Swift.Optional<Swift.String.IntentInputOptions>",
+              "valueKind": "NilLiteral"
+            },
+            {
+              "label": "requestValueDialog",
+              "type": "Swift.Optional<AppIntents.IntentDialog>",
+              "valueKind": "NilLiteral"
+            },
+            {
+              "label": "inputConnectionBehavior",
+              "type": "AppIntents.InputConnectionBehavior",
+              "valueKind": "Runtime"
+            }
+          ]
+        }
+      },
+      {
+        "label": "title",
+        "type": "Foundation.LocalizedStringResource",
+        "mangledTypeName": "n/a - deprecated",
+        "isStatic": "true",
+        "isComputed": "false",
+        "file": "/Users/zorigoo/Documents/HabitTracker/HabitTracker/HabitWidget/HabitWidgetControl.swift",
+        "line": 52,
+        "valueKind": "RawLiteral",
+        "value": "Timer Name Configuration"
+      },
+      {
+        "label": "timerName",
+        "type": "Swift.String",
+        "mangledTypeName": "n/a - deprecated",
+        "isStatic": "false",
+        "isComputed": "true",
+        "file": "/Users/zorigoo/Documents/HabitTracker/HabitTracker/HabitWidget/HabitWidgetControl.swift",
+        "line": 55,
+        "valueKind": "InitCall",
+        "value": {
+          "type": "AppIntents.IntentParameter<Swift.String>",
+          "arguments": [
+            {
+              "label": "title",
+              "type": "Foundation.LocalizedStringResource",
+              "valueKind": "RawLiteral",
+              "value": "Timer Name"
+            },
+            {
+              "label": "description",
+              "type": "Swift.Optional<Foundation.LocalizedStringResource>",
+              "valueKind": "NilLiteral"
+            },
+            {
+              "label": "default",
+              "type": "Swift.Optional<Swift.String>",
+              "valueKind": "RawLiteral",
+              "value": "Timer"
+            },
+            {
+              "label": "inputOptions",
+              "type": "Swift.Optional<Swift.String.IntentInputOptions>",
+              "valueKind": "NilLiteral"
+            },
+            {
+              "label": "requestValueDialog",
+              "type": "Swift.Optional<AppIntents.IntentDialog>",
+              "valueKind": "NilLiteral"
+            },
+            {
+              "label": "inputConnectionBehavior",
+              "type": "AppIntents.InputConnectionBehavior",
+              "valueKind": "Runtime"
+            }
+          ]
+        },
+        "propertyWrappers": [
+          {
+            "type": "AppIntents.IntentParameter",
+            "file": "/Users/zorigoo/Documents/HabitTracker/HabitTracker/HabitWidget/HabitWidgetControl.swift",
+            "line": 54,
+            "arguments": [
+              {
+                "label": "title",
+                "type": "Foundation.LocalizedStringResource",
+                "valueKind": "RawLiteral",
+                "value": "Timer Name"
+              },
+              {
+                "label": "default",
+                "type": "Swift.Optional<Swift.String>",
+                "valueKind": "RawLiteral",
+                "value": "Timer"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "$timerName",
+        "type": "AppIntents.IntentParameter<Swift.String>",
+        "mangledTypeName": "n/a - deprecated",
+        "isStatic": "false",
+        "isComputed": "true",
+        "file": "/Users/zorigoo/Documents/HabitTracker/HabitTracker/HabitWidget/HabitWidgetControl.swift",
+        "line": 55,
+        "valueKind": "Runtime"
+      }
+    ]
+  },
+  {
+    "typeName": "HabitWidgetExtension.StartTimerIntent",
+    "mangledTypeName": "20HabitWidgetExtension16StartTimerIntentV",
+    "kind": "struct",
+    "file": "/Users/zorigoo/Documents/HabitTracker/HabitTracker/HabitWidget/HabitWidgetControl.swift",
+    "line": 58,
+    "conformances": [
+      "AppIntents.SetValueIntent",
+      "AppIntents.AppIntent",
+      "AppIntents.PersistentlyIdentifiable",
+      "AppIntents._SupportsAppDependencies",
+      "Swift.Sendable",
+      "Swift.SendableMetatype"
+    ],
+    "allConformances": [
+      {
+        "protocolName": "AppIntents.SetValueIntent",
+        "conformanceDefiningModule": "HabitWidgetExtension"
+      },
+      {
+        "protocolName": "AppIntents.AppIntent",
+        "conformanceDefiningModule": "HabitWidgetExtension"
+      },
+      {
+        "protocolName": "AppIntents.PersistentlyIdentifiable",
+        "conformanceDefiningModule": "HabitWidgetExtension"
+      },
+      {
+        "protocolName": "AppIntents._SupportsAppDependencies",
+        "conformanceDefiningModule": "HabitWidgetExtension"
+      },
+      {
+        "protocolName": "Swift.Sendable",
+        "conformanceDefiningModule": "HabitWidgetExtension"
+      },
+      {
+        "protocolName": "Swift.SendableMetatype",
+        "conformanceDefiningModule": "HabitWidgetExtension"
+      }
+    ],
+    "associatedTypeAliases": [
+      {
+        "typeAliasName": "ValueType",
+        "substitutedTypeName": "Swift.Bool",
+        "substitutedMangledTypeName": "Sb"
+      },
+      {
+        "typeAliasName": "PerformResult",
+        "substitutedTypeName": "some AppIntents.IntentResult",
+        "substitutedMangledTypeName": "20HabitWidgetExtension16StartTimerIntentV7performQryYaKFQOy_Qo_",
+        "opaqueTypeProtocolRequirements": [
+          "AppIntents.IntentResult"
+        ],
+        "opaqueTypeSameTypeRequirements": []
+      },
+      {
+        "typeAliasName": "SummaryContent",
+        "substitutedTypeName": "some AppIntents.ParameterSummary",
+        "substitutedMangledTypeName": "10AppIntents0A6IntentPAAE16parameterSummaryQrvpZQOy20HabitWidgetExtension010StartTimerC0V_Qo_",
+        "opaqueTypeProtocolRequirements": [
+          "AppIntents.ParameterSummary"
+        ],
+        "opaqueTypeSameTypeRequirements": []
+      }
+    ],
+    "properties": [
+      {
+        "label": "_name",
+        "type": "AppIntents.IntentParameter<Swift.String>",
+        "mangledTypeName": "n/a - deprecated",
+        "isStatic": "false",
+        "isComputed": "false",
+        "file": "/Users/zorigoo/Documents/HabitTracker/HabitTracker/HabitWidget/HabitWidgetControl.swift",
+        "line": 62,
+        "valueKind": "InitCall",
+        "value": {
+          "type": "AppIntents.IntentParameter<Swift.String>",
+          "arguments": [
+            {
+              "label": "title",
+              "type": "Foundation.LocalizedStringResource",
+              "valueKind": "RawLiteral",
+              "value": "Timer Name"
+            },
+            {
+              "label": "description",
+              "type": "Swift.Optional<Foundation.LocalizedStringResource>",
+              "valueKind": "NilLiteral"
+            },
+            {
+              "label": "default",
+              "type": "Swift.Optional<Swift.String>",
+              "valueKind": "NilLiteral"
+            },
+            {
+              "label": "inputOptions",
+              "type": "Swift.Optional<Swift.String.IntentInputOptions>",
+              "valueKind": "NilLiteral"
+            },
+            {
+              "label": "requestValueDialog",
+              "type": "Swift.Optional<AppIntents.IntentDialog>",
+              "valueKind": "NilLiteral"
+            },
+            {
+              "label": "inputConnectionBehavior",
+              "type": "AppIntents.InputConnectionBehavior",
+              "valueKind": "Runtime"
+            }
+          ]
+        }
+      },
+      {
+        "label": "_value",
+        "type": "AppIntents.IntentParameter<Swift.Bool>",
+        "mangledTypeName": "n/a - deprecated",
+        "isStatic": "false",
+        "isComputed": "false",
+        "file": "/Users/zorigoo/Documents/HabitTracker/HabitTracker/HabitWidget/HabitWidgetControl.swift",
+        "line": 65,
+        "valueKind": "InitCall",
+        "value": {
+          "type": "AppIntents.IntentParameter<Swift.Bool>",
+          "arguments": [
+            {
+              "label": "title",
+              "type": "Foundation.LocalizedStringResource",
+              "valueKind": "RawLiteral",
+              "value": "Timer is running"
+            },
+            {
+              "label": "description",
+              "type": "Swift.Optional<Foundation.LocalizedStringResource>",
+              "valueKind": "NilLiteral"
+            },
+            {
+              "label": "default",
+              "type": "Swift.Optional<Swift.Bool>",
+              "valueKind": "NilLiteral"
+            },
+            {
+              "label": "displayName",
+              "type": "Swift.Optional<Swift.Bool.IntentDisplayName>",
+              "valueKind": "NilLiteral"
+            },
+            {
+              "label": "requestValueDialog",
+              "type": "Swift.Optional<AppIntents.IntentDialog>",
+              "valueKind": "NilLiteral"
+            },
+            {
+              "label": "inputConnectionBehavior",
+              "type": "AppIntents.InputConnectionBehavior",
+              "valueKind": "Runtime"
+            }
+          ]
+        }
+      },
+      {
+        "label": "title",
+        "type": "Foundation.LocalizedStringResource",
+        "mangledTypeName": "n/a - deprecated",
+        "isStatic": "true",
+        "isComputed": "false",
+        "file": "/Users/zorigoo/Documents/HabitTracker/HabitTracker/HabitWidget/HabitWidgetControl.swift",
+        "line": 59,
+        "valueKind": "RawLiteral",
+        "value": "Start a timer"
+      },
+      {
+        "label": "name",
+        "type": "Swift.String",
+        "mangledTypeName": "n/a - deprecated",
+        "isStatic": "false",
+        "isComputed": "true",
+        "file": "/Users/zorigoo/Documents/HabitTracker/HabitTracker/HabitWidget/HabitWidgetControl.swift",
+        "line": 62,
+        "valueKind": "InitCall",
+        "value": {
+          "type": "AppIntents.IntentParameter<Swift.String>",
+          "arguments": [
+            {
+              "label": "title",
+              "type": "Foundation.LocalizedStringResource",
+              "valueKind": "RawLiteral",
+              "value": "Timer Name"
+            },
+            {
+              "label": "description",
+              "type": "Swift.Optional<Foundation.LocalizedStringResource>",
+              "valueKind": "NilLiteral"
+            },
+            {
+              "label": "default",
+              "type": "Swift.Optional<Swift.String>",
+              "valueKind": "NilLiteral"
+            },
+            {
+              "label": "inputOptions",
+              "type": "Swift.Optional<Swift.String.IntentInputOptions>",
+              "valueKind": "NilLiteral"
+            },
+            {
+              "label": "requestValueDialog",
+              "type": "Swift.Optional<AppIntents.IntentDialog>",
+              "valueKind": "NilLiteral"
+            },
+            {
+              "label": "inputConnectionBehavior",
+              "type": "AppIntents.InputConnectionBehavior",
+              "valueKind": "Runtime"
+            }
+          ]
+        },
+        "propertyWrappers": [
+          {
+            "type": "AppIntents.IntentParameter",
+            "file": "/Users/zorigoo/Documents/HabitTracker/HabitTracker/HabitWidget/HabitWidgetControl.swift",
+            "line": 61,
+            "arguments": [
+              {
+                "label": "title",
+                "type": "Foundation.LocalizedStringResource",
+                "valueKind": "RawLiteral",
+                "value": "Timer Name"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "$name",
+        "type": "AppIntents.IntentParameter<Swift.String>",
+        "mangledTypeName": "n/a - deprecated",
+        "isStatic": "false",
+        "isComputed": "true",
+        "file": "/Users/zorigoo/Documents/HabitTracker/HabitTracker/HabitWidget/HabitWidgetControl.swift",
+        "line": 62,
+        "valueKind": "Runtime"
+      },
+      {
+        "label": "value",
+        "type": "Swift.Bool",
+        "mangledTypeName": "n/a - deprecated",
+        "isStatic": "false",
+        "isComputed": "true",
+        "file": "/Users/zorigoo/Documents/HabitTracker/HabitTracker/HabitWidget/HabitWidgetControl.swift",
+        "line": 65,
+        "valueKind": "InitCall",
+        "value": {
+          "type": "AppIntents.IntentParameter<Swift.Bool>",
+          "arguments": [
+            {
+              "label": "title",
+              "type": "Foundation.LocalizedStringResource",
+              "valueKind": "RawLiteral",
+              "value": "Timer is running"
+            },
+            {
+              "label": "description",
+              "type": "Swift.Optional<Foundation.LocalizedStringResource>",
+              "valueKind": "NilLiteral"
+            },
+            {
+              "label": "default",
+              "type": "Swift.Optional<Swift.Bool>",
+              "valueKind": "NilLiteral"
+            },
+            {
+              "label": "displayName",
+              "type": "Swift.Optional<Swift.Bool.IntentDisplayName>",
+              "valueKind": "NilLiteral"
+            },
+            {
+              "label": "requestValueDialog",
+              "type": "Swift.Optional<AppIntents.IntentDialog>",
+              "valueKind": "NilLiteral"
+            },
+            {
+              "label": "inputConnectionBehavior",
+              "type": "AppIntents.InputConnectionBehavior",
+              "valueKind": "Runtime"
+            }
+          ]
+        },
+        "propertyWrappers": [
+          {
+            "type": "AppIntents.IntentParameter",
+            "file": "/Users/zorigoo/Documents/HabitTracker/HabitTracker/HabitWidget/HabitWidgetControl.swift",
+            "line": 64,
+            "arguments": [
+              {
+                "label": "title",
+                "type": "Foundation.LocalizedStringResource",
+                "valueKind": "RawLiteral",
+                "value": "Timer is running"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "$value",
+        "type": "AppIntents.IntentParameter<Swift.Bool>",
+        "mangledTypeName": "n/a - deprecated",
+        "isStatic": "false",
+        "isComputed": "true",
+        "file": "/Users/zorigoo/Documents/HabitTracker/HabitTracker/HabitWidget/HabitWidgetControl.swift",
+        "line": 65,
+        "valueKind": "Runtime"
+      }
+    ]
+  }
+]

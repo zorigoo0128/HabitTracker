@@ -1,0 +1,56 @@
+{
+  "source": "/Users/zorigoo/Documents/HabitTracker/HabitTracker/HabitTracker/ContentView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Habit Tracker",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 105
+        }
+      },
+      {
+        "comment": "",
+        "key": "Glass UI Edition",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 110
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 121
+        }
+      },
+      {
+        "comment": "",
+        "key": "Total Logs",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 125
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 131
+        }
+      },
+      {
+        "comment": "",
+        "key": "Best Streak",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 135
+        }
+      }
+    ]
+  },
+  "version": 1
+}

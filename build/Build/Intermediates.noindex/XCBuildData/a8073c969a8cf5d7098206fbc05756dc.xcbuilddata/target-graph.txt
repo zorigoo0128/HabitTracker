@@ -1,0 +1,4 @@
+Target dependency graph (2 targets)
+Target 'HabitTracker' in project 'HabitTracker'
+➜ Explicit dependency on target 'HabitWidgetExtension' in project 'HabitTracker'
+Target 'HabitWidgetExtension' in project 'HabitTracker' (no dependencies)

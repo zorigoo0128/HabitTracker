@@ -1,0 +1,16 @@
+{
+  "source": "/Users/zorigoo/Documents/HabitTracker/HabitTracker/HabitTracker/QuickRecommendView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Quick Log Recommends",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 20
+        }
+      }
+    ]
+  },
+  "version": 1
+}
