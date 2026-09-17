@@ -11,9 +11,15 @@ import Combine
 import WidgetKit
 
 class HabitStore: ObservableObject {
+    private var isSyncingWithDisk = false
+    private var cancellables = Set<AnyCancellable>()
+    private var toastTimer: AnyCancellable?
+    
     @Published var logs: [HabitLog] = [] {
         didSet {
-            saveLogs()
+            if !isSyncingWithDisk {
+                HabitStorage.saveLogs(logs)
+            }
         }
     }
     
@@ -21,22 +27,47 @@ class HabitStore: ObservableObject {
     @Published var selectedHeatmapDate: Date? = nil
     @Published var recentAddedToastMessage: String? = nil
     
-    private let storageKey = "HabitTracker_Logs_V1"
-    private let appGroupIdentifier = "group.com.zorigoo.HabitTracker"
-    private let widgetKind = "HabitWidget"
-    private var toastTimer: AnyCancellable?
-
-    private var sharedDefaults: UserDefaults {
-        guard let defaults = UserDefaults(suiteName: appGroupIdentifier) else {
-            assertionFailure("Unable to access the HabitTracker App Group.")
-            return .standard
-        }
-        return defaults
-    }
-    
     init() {
         if !loadLogs() {
             seedSampleData()
+        }
+        setupNotificationObservers()
+    }
+    
+    private func setupNotificationObservers() {
+        // Observer for external processes (e.g. background Shortcuts)
+        DistributedNotificationCenter.default()
+            .publisher(for: HabitStorage.didUpdateLogsNotification)
+            .receive(on: RunLoop.main)
+            .sink { [weak self] notification in
+                let title = notification.userInfo?["title"] as? String
+                self?.reloadFromDisk(incomingTitle: title)
+            }
+            .store(in: &cancellables)
+        
+        // Observer for in-process notifications
+        NotificationCenter.default
+            .publisher(for: HabitStorage.didUpdateLogsNotification)
+            .receive(on: RunLoop.main)
+            .sink { [weak self] notification in
+                let title = notification.userInfo?["title"] as? String
+                self?.reloadFromDisk(incomingTitle: title)
+            }
+            .store(in: &cancellables)
+    }
+    
+    func reloadFromDisk(incomingTitle: String? = nil) {
+        let loaded = HabitStorage.loadLogs()
+        guard loaded != logs else { return }
+        
+        isSyncingWithDisk = true
+        withAnimation(.spring(response: 0.35, dampingFraction: 0.7)) {
+            self.logs = loaded
+        }
+        isSyncingWithDisk = false
+        
+        if let title = incomingTitle {
+            showToast(message: "Logged from Shortcut: \(title)")
         }
     }
     
@@ -93,19 +124,7 @@ class HabitStore: ObservableObject {
     // MARK: - Category Inference
     
     func inferCategory(from text: String) -> HabitCategory {
-        let lower = text.lowercased()
-        if lower.contains("homework") || lower.contains("duolingo") || lower.contains("read") || lower.contains("study") || lower.contains("book") || lower.contains("learn") {
-            return .learning
-        } else if lower.contains("workout") || lower.contains("gym") || lower.contains("run") || lower.contains("walk") || lower.contains("steps") || lower.contains("exercise") {
-            return .fitness
-        } else if lower.contains("water") || lower.contains("sleep") || lower.contains("eat") || lower.contains("health") || lower.contains("diet") || lower.contains("vitamin") {
-            return .health
-        } else if lower.contains("meditat") || lower.contains("journal") || lower.contains("mind") || lower.contains("breathe") || lower.contains("pray") {
-            return .mindset
-        } else if lower.contains("code") || lower.contains("task") || lower.contains("work") || lower.contains("project") || lower.contains("clean") || lower.contains("focus") {
-            return .productivity
-        }
-        return .general
+        HabitCategory.infer(from: text)
     }
     
     // MARK: - Filtering & Today Views
@@ -236,30 +255,17 @@ class HabitStore: ObservableObject {
     // MARK: - Persistence
     
     private func saveLogs() {
-        do {
-            let data = try JSONEncoder().encode(logs)
-            sharedDefaults.set(data, forKey: storageKey)
-            WidgetCenter.shared.reloadTimelines(ofKind: widgetKind)
-        } catch {
-            print("Failed to save habit logs: \(error)")
-        }
+        HabitStorage.saveLogs(logs)
     }
     
     @discardableResult
     private func loadLogs() -> Bool {
-        // Migrate logs written before the widget used the shared App Group.
-        let data = sharedDefaults.data(forKey: storageKey) ?? UserDefaults.standard.data(forKey: storageKey)
-        guard let data else { return false }
-        do {
-            logs = try JSONDecoder().decode([HabitLog].self, from: data)
-            if sharedDefaults.data(forKey: storageKey) == nil {
-                sharedDefaults.set(data, forKey: storageKey)
-            }
-            return true
-        } catch {
-            print("Failed to load habit logs: \(error)")
-            return false
-        }
+        let loaded = HabitStorage.loadLogs()
+        guard !loaded.isEmpty else { return false }
+        isSyncingWithDisk = true
+        self.logs = loaded
+        isSyncingWithDisk = false
+        return true
     }
     
     // MARK: - Seed Data for First Launch

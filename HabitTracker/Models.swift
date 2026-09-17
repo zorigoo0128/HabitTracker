@@ -7,14 +7,26 @@
 
 import Foundation
 import SwiftUI
+import AppIntents
 
-enum HabitCategory: String, Codable, CaseIterable, Identifiable {
+enum HabitCategory: String, Codable, CaseIterable, Identifiable, AppEnum {
     case learning = "Learning"
     case fitness = "Fitness"
     case health = "Health"
     case mindset = "Mindset"
     case productivity = "Productivity"
     case general = "General"
+    
+    static var typeDisplayRepresentation: TypeDisplayRepresentation = "Habit Category"
+    
+    static var caseDisplayRepresentations: [HabitCategory: DisplayRepresentation] = [
+        .learning: DisplayRepresentation(title: "Learning", subtitle: "Study, reading, languages", image: .init(systemName: "book.fill")),
+        .fitness: DisplayRepresentation(title: "Fitness", subtitle: "Workout, running, walking", image: .init(systemName: "figure.run")),
+        .health: DisplayRepresentation(title: "Health", subtitle: "Water, sleep, nutrition", image: .init(systemName: "heart.fill")),
+        .mindset: DisplayRepresentation(title: "Mindset", subtitle: "Meditation, mindfulness", image: .init(systemName: "brain.head.profile")),
+        .productivity: DisplayRepresentation(title: "Productivity", subtitle: "Coding, tasks, work", image: .init(systemName: "checkmark.seal.fill")),
+        .general: DisplayRepresentation(title: "General", subtitle: "Other activities", image: .init(systemName: "sparkles"))
+    ]
     
     var id: String { rawValue }
     
@@ -38,6 +50,22 @@ enum HabitCategory: String, Codable, CaseIterable, Identifiable {
         case .productivity: return .cyanAccent
         case .general: return .white.opacity(0.8)
         }
+    }
+    
+    static func infer(from text: String) -> HabitCategory {
+        let lower = text.lowercased()
+        if lower.contains("homework") || lower.contains("duolingo") || lower.contains("read") || lower.contains("study") || lower.contains("book") || lower.contains("learn") {
+            return .learning
+        } else if lower.contains("workout") || lower.contains("gym") || lower.contains("run") || lower.contains("walk") || lower.contains("steps") || lower.contains("exercise") {
+            return .fitness
+        } else if lower.contains("water") || lower.contains("sleep") || lower.contains("eat") || lower.contains("health") || lower.contains("diet") || lower.contains("vitamin") {
+            return .health
+        } else if lower.contains("meditat") || lower.contains("journal") || lower.contains("mind") || lower.contains("breathe") || lower.contains("pray") {
+            return .mindset
+        } else if lower.contains("code") || lower.contains("task") || lower.contains("work") || lower.contains("project") || lower.contains("clean") || lower.contains("focus") {
+            return .productivity
+        }
+        return .general
     }
 }
 
